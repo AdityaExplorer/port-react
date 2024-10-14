@@ -1,0 +1,93 @@
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Creates a responsive grid */
+  gap: 10px; /* Reduced gap for compact layout */
+  justify-items: center; /* Center the items in the grid */
+  padding: 10px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px; 
+  height: 500px; 
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  column-gap: 20px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 1rem; 
+  margin: 0;
+}
+
+.card-desc, .card-tech {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #007bff;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.head {
+  text-align: center;
+  letter-spacing: 5px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) {
+  .project-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+      gap: 5px;
+  }
+
+  .card {
+      max-width: 150px; 
+      padding: 8px;
+  }
+
+  .card-img {
+      height: 80px; 
+  }
+
+  .card-title {
+      font-size: 0.9rem;
+  }
+
+  .card-desc, .card-tech {
+      font-size: 0.7rem;
+  }
+
+  .head {
+      font-size: 1.3rem;
+  }
+}
