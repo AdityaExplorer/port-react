@@ -5,7 +5,10 @@ import MyIntro from './components/MyIntro';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
 import Footer from './components/Footer';
+
 function App() {
+
+ 
   
   return (
     <>
