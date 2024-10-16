@@ -4,6 +4,7 @@ import Aditya_Img from "../images/MyImage.png";
 const MyIntro = () => {
   return (
     <>
+
       <div className="container-fluid">
         <div className="left-intro leads ">
           <h2>
@@ -46,6 +47,7 @@ const MyIntro = () => {
           </div>
         </center>
       </div>
+      
     </>
   );
 };

@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Certificates from "./components/Certificates";
 import Footer from "./components/Footer";
 import { useState } from "react";
-import SendMessage from "./components/SendMessage";
+import AboutMe from "./components/AboutMe";
 
 
 function App() {
@@ -23,13 +23,13 @@ function App() {
         {selectedTab === "Home" ? (
           <>
             <MyIntro />
-            <Projects />
             <Certificates />
           </>
-        ) : selectedTab === "Contact" ? (
-            <SendMessage></SendMessage>
         ) : (
-          <MyIntro />
+          <>
+          <AboutMe></AboutMe>
+          <Projects />
+          </>
         )}
       </div>
 

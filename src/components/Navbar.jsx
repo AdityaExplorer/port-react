@@ -22,14 +22,7 @@ const Navbar=({selectedTab,setSelectedTab})=>{
             About
           </a>
         </li>
-        <li onClick={(e) => {
-          e.preventDefault();
-          setSelectedTab("Contact")}}>
-          <a href="#" className={`nav-link ${selectedTab === "Contact" ? 'active' : ''}`}>
-            <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#speedometer2"></use></svg>
-            Contact
-          </a>
-        </li>
+  
       </ul>
       
       <div className="col-md-3 text-end">
