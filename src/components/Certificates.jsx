@@ -48,7 +48,7 @@ const dataCertificates=[
     {
         id:'5',
         image:Project_Display,
-        title:'Participate in Project Dispaly Compition',
+        title:'Participate in Project Dispaly Competiion',
     },
     {
         id:'6',

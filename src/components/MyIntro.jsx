@@ -8,9 +8,8 @@ const MyIntro = () => {
         <div className="left-intro leads ">
           <h2>
             <i>
-              I am a recent graduate with a Bachelor of Technology in
-              Electronics and Communication Engineering (ECE) and an overall
-              SGPA of 7.5. I have strong skills in HTML, CSS, JavaScript, and
+              Hi,my name is Aditya Verma and I am from Jammu and I am a recent graduate with a Bachelor of Technology in Electronics and Communication Engineering (ECE) and an overall
+              CGPA of 7.5. I have  skills in HTML, CSS, JavaScript, and
               Python, and I am experienced in using the Django framework for web
               development. Recently, I have also learned React.js. My knowledge
               of these technologies allows me to contribute effectively to
@@ -24,25 +23,25 @@ const MyIntro = () => {
       </div>
       <div className="about-section my-4">
         <center>
-          <h1>My Skills</h1>
+          <h2 style={{letterSpacing:"5px"}}>My Skills</h2>
           <div className="contents">
-            <ul class="list-group">
-              <li class="list-group-item active" aria-current="true">
+            <ul className="list-group">
+              <li className="list-group-item active" aria-current="true">
                 Web Development
               </li>
-              <li class="list-group-item my-5">Html,Css,JavaScript,Bootstrap,React.js</li>
+              <li className="list-group-item my-5">Html,Css,JavaScript,Bootstrap,React.js</li>
             </ul>
-            <ul class="list-group ">
-              <li class="list-group-item active" aria-current="true">
+            <ul className="list-group ">
+              <li className="list-group-item active" aria-current="true">
                 Programming
               </li>
-              <li class="list-group-item my-5 ">Python,Django,Sql</li>
+              <li className="list-group-item my-5 ">Python,Django,Sql</li>
             </ul>
-            <ul class="list-group">
-              <li class="list-group-item active" aria-current="true">
+            <ul className="list-group">
+              <li className="list-group-item active" aria-current="true">
                 Development Tools
               </li>
-              <li class="list-group-item my-5">Visiual Studio , Jupyter Notebook, Xampp, Pycharm, Arduino IDE, GitHub(Version Control System)</li>
+              <li className="list-group-item my-5">Visiual Studio , Jupyter Notebook, Xampp, Pycharm, Arduino IDE, GitHub(Version Control System)</li>
             </ul>
           </div>
         </center>

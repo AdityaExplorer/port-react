@@ -1,36 +1,42 @@
-import './App.css'
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from './components/Navbar';
-import MyIntro from './components/MyIntro';
-import Projects from './components/Projects';
-import Certificates from './components/Certificates';
-import Footer from './components/Footer';
-import { useState } from 'react';
+import Navbar from "./components/Navbar";
+import MyIntro from "./components/MyIntro";
+import Projects from "./components/Projects";
+import Certificates from "./components/Certificates";
+import Footer from "./components/Footer";
+import { useState } from "react";
+import SendMessage from "./components/SendMessage";
+
 
 function App() {
+  const [selectedTab, setSelectedTab] = useState("Home");
 
-  const[selectedTab,setSelectedTab]=useState("Home")
- 
-  
   return (
     <>
       <div className="app-container">
-        <Navbar selectedTab={selectedTab} setSelectedTab={setSelectedTab}></Navbar>
+        <Navbar
+          selectedTab={selectedTab}
+          setSelectedTab={setSelectedTab}
+        ></Navbar>
         <div className="content">
-            {selectedTab === "Home" ? (
-                <>
-                  <MyIntro />
-                  <Projects />
-                  <Certificates />
-                </>
-              ) : (
-                <MyIntro />
-              )}
-        </div>
+        {selectedTab === "Home" ? (
+          <>
+            <MyIntro />
+            <Projects />
+            <Certificates />
+          </>
+        ) : selectedTab === "Contact" ? (
+            <SendMessage></SendMessage>
+        ) : (
+          <MyIntro />
+        )}
+      </div>
+
         <Footer></Footer>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

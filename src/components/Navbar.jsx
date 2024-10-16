@@ -9,6 +9,7 @@ const Navbar=({selectedTab,setSelectedTab})=>{
       </div>
       
       <ul className="nav nav-pills mb-auto">
+        
         <li className="nav-item" onClick={() => setSelectedTab("Home")}>
           <a href="#" className={`nav-link ${selectedTab === "Home" ? 'active' : ''}`} aria-current="page">
             <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
@@ -19,6 +20,14 @@ const Navbar=({selectedTab,setSelectedTab})=>{
           <a href="#" className={`nav-link ${selectedTab === "About" ? 'active' : ''}`}>
             <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#speedometer2"></use></svg>
             About
+          </a>
+        </li>
+        <li onClick={(e) => {
+          e.preventDefault();
+          setSelectedTab("Contact")}}>
+          <a href="#" className={`nav-link ${selectedTab === "Contact" ? 'active' : ''}`}>
+            <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#speedometer2"></use></svg>
+            Contact
           </a>
         </li>
       </ul>
