@@ -15,6 +15,7 @@
 i{
     font-size: 1.2rem;
     color: black;
+    cursor: pointer;
 }
 .right-my-image {
     flex: 1; 
@@ -24,10 +25,20 @@ i{
 }
 
 .right-my-image img {
-    width: 100%; 
+    width: 70%; 
     max-width: 400px; 
     border-radius: 20%; 
     height: 60vh; 
+    object-fit: cover;
+}
+.right-my-image img {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.right-my-image img:hover {
+  transform: translateY(-10px);
+  box-shadow: 4px 4px 4px 4px rgba(60,60,10,0.5);
 }
 
 /* Media queries for smaller screens */
@@ -52,6 +63,7 @@ i{
         max-width: 60%; 
         height: 30%;
         border-radius: 10px; 
+        
     }
 
     .left-intro {
