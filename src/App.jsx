@@ -5,18 +5,30 @@ import MyIntro from './components/MyIntro';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
 import Footer from './components/Footer';
+import { useState } from 'react';
 
 function App() {
 
+  const[selectedTab,setSelectedTab]=useState("Home")
  
   
   return (
     <>
-      <Navbar></Navbar>
-      <MyIntro></MyIntro>
-      <Projects></Projects>
-      <Certificates></Certificates>
-      <Footer></Footer>
+      <div className="app-container">
+        <Navbar selectedTab={selectedTab} setSelectedTab={setSelectedTab}></Navbar>
+        <div className="content">
+            {selectedTab === "Home" ? (
+                <>
+                  <MyIntro />
+                  <Projects />
+                  <Certificates />
+                </>
+              ) : (
+                <MyIntro />
+              )}
+        </div>
+        <Footer></Footer>
+      </div>
     </>
   )
 }
