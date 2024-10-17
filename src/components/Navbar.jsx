@@ -1,5 +1,5 @@
 import './Navbar.css';
-
+import { FaGithub } from "react-icons/fa";
 const Navbar=({selectedTab,setSelectedTab,onCertificateClick,onConatctClick })=>{
     return (
       <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom fixed-top">
@@ -36,8 +36,8 @@ const Navbar=({selectedTab,setSelectedTab,onCertificateClick,onConatctClick })=>
   
       </ul>
       
-      <div className="col-md-3 text-end">
-        {/* Add any right-side content here */}
+      <div className="col-md-3 text-end" style={{marginRight:"30px",fontSize:"25px"}}>
+        <a href="https://github.com/AdityaExplorer?tab=repositories" target='blank'><FaGithub /></a>
       </div>
     </header>
     
