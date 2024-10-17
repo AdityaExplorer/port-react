@@ -5,12 +5,25 @@ import MyIntro from "./components/MyIntro";
 import Projects from "./components/Projects";
 import Certificates from "./components/Certificates";
 import Footer from "./components/Footer";
-import { useState } from "react";
+import { useState,useRef } from "react";
 import AboutMe from "./components/AboutMe";
 
 
 function App() {
   const [selectedTab, setSelectedTab] = useState("Home");
+  const certificateSectionRef = useRef(null);
+  const conatctSectionRef=useRef(null);
+  // Function to handle scrolling
+  const scrollToCertificates = () => {
+    if (certificateSectionRef.current) {
+      certificateSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const scrollToContact=()=>{
+    if(conatctSectionRef.current){
+      conatctSectionRef.current.scrollIntoView({behavior:'smooth'})
+    }
+  }
 
   return (
     <>
@@ -18,12 +31,14 @@ function App() {
         <Navbar
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}
+          onCertificateClick={scrollToCertificates} 
+          onConatctClick={scrollToContact}
         ></Navbar>
         <div className="content">
         {selectedTab === "Home" ? (
           <>
             <MyIntro />
-            <Certificates />
+            <Certificates ref={certificateSectionRef} />
           </>
         ) : (
           <>
@@ -33,7 +48,7 @@ function App() {
         )}
       </div>
 
-        <Footer></Footer>
+        <Footer ref={conatctSectionRef} ></Footer>
       </div>
     </>
   );

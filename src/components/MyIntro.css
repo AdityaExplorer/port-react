@@ -27,7 +27,10 @@ i{
 .right-my-image img {
     width: 70%; 
     max-width: 400px; 
-    border-radius: 20%; 
+    border-radius: 50%;
+    outline: 2px solid grey;
+    /* outline-offset: 10px;  */
+    background-color: coral;
     height: 60vh; 
     object-fit: cover;
 }

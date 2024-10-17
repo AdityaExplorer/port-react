@@ -1,6 +1,9 @@
 import './Navbar.css';
 
-const Navbar=({selectedTab,setSelectedTab})=>{
+const Navbar=({selectedTab,setSelectedTab,onCertificateClick,onConatctClick })=>{
+
+ 
+  
 
     return (
       <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom fixed-top">
@@ -20,6 +23,18 @@ const Navbar=({selectedTab,setSelectedTab})=>{
           <a href="#" className={`nav-link ${selectedTab === "About" ? 'active' : ''}`}>
             {/* <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#about"></use></svg> */}
             About
+          </a>
+        </li>
+        <li>
+          <a href="#" className={`nav-link ${selectedTab === "Certificates" ? 'active' : ''}`} onClick={onCertificateClick}>
+            {/* <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#about"></use></svg> */}
+            Certificates
+          </a>
+        </li>
+        <li>
+          <a href="#" className={`nav-link ${selectedTab === "Contact" ? 'active' : ''}`} onClick={onConatctClick}>
+            {/* <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#about"></use></svg> */}
+            Contact
           </a>
         </li>
   

@@ -5,12 +5,14 @@ import data_base from '../images/NEW SQL.jpg';
 import Project_Display from '../images/PROJECT DISPLAY.jpg';
 import VSI_IMG from '../images/VLSI.jpg';
 import './Certificates.css';
+import React, { forwardRef } from 'react';
 
 
-const Certificates=()=>{
+
+const Certificates=forwardRef((props,ref) => {
     return (
-        <div className="container">
-            <center><h1 className="leads">Certificates</h1></center>
+        <div className="container" ref={ref} id="certificates">
+            <center><h1 className="leads" >Certificates</h1></center>
             <div className="certificates-grid">
                 {dataCertificates.map(data => (
                     <div key={data.id} className="certificate-card">
@@ -21,7 +23,7 @@ const Certificates=()=>{
             </div>
         </div>
     );
-};
+});
 
 
 const dataCertificates=[
