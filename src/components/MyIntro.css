@@ -145,3 +145,13 @@ i{
   .degree_image{
     margin-top: 8%;
   }
+  @media(max-width:386px){
+      .left-intro i{
+        font-size: 13px;
+      }
+      .right-my-image img{
+        height: 35vh;
+        object-fit:cover;
+        
+      }
+  }

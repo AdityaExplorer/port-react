@@ -15,10 +15,10 @@ const Navbar=({selectedTab,setSelectedTab,onCertificateClick,onConatctClick })=>
             Home
           </a>
         </li>
-        <li onClick={() => setSelectedTab("About")}>
-          <a href="#" className={`nav-link ${selectedTab === "About" ? 'active' : ''}`}>
+        <li onClick={() => setSelectedTab("Projects")}>
+          <a href="#" className={`nav-link ${selectedTab === "Projects" ? 'active' : ''}`}>
             {/* <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#about"></use></svg> */}
-            About
+            Projects
           </a>
         </li>
         <li>
@@ -36,7 +36,7 @@ const Navbar=({selectedTab,setSelectedTab,onCertificateClick,onConatctClick })=>
   
       </ul>
       
-      <div className="col-md-3 text-end" style={{marginRight:"30px",fontSize:"25px"}}>
+      <div className="col-md-3 text-end icon" style={{marginRight:"30px",fontSize:"25px"}}>
         <a href="https://github.com/AdityaExplorer?tab=repositories" target='blank'><FaGithub /></a>
       </div>
     </header>

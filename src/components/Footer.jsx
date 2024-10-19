@@ -45,13 +45,13 @@ const Footer = forwardRef ((props,ref) => {
         </form>
         {messageSent && <p className="mt-2 text-success">Message sent successfully!</p>}
       </div>
-      <center style={{width:"100%",marginLeft:"40%"}}>
+      <center style={{marginLeft:"40%"}}>
         <ul
           className="nav justify
     -content-center border-bottom pb-3 mb-3 "
         >
           <h3 style={{ color: "rgba(0,0,0,0.6)" }}>
-            <marquee behavior="20" direction="left">
+            <marquee behavior="20" direction="left" width="100%" style={{marginTop:"10px"}}>
               This website is created by Aditya Verma.
             </marquee>
           </h3>

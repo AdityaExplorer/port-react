@@ -6,7 +6,6 @@ import Projects from "./components/Projects";
 import Certificates from "./components/Certificates";
 import Footer from "./components/Footer";
 import { useState,useRef } from "react";
-import AboutMe from "./components/AboutMe";
 
 
 function App() {
@@ -42,7 +41,6 @@ function App() {
           </>
         ) : (
           <>
-          <AboutMe></AboutMe>
           <Projects />
           </>
         )}
